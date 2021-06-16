@@ -5,9 +5,10 @@ const Schema = mongoose.Schema;
 const transactionSchema = new Schema({
   origination: {
     type: Date,
+    default: Date.now
   },
   sales: {
-    type: Decimal128,
+    type: Number,
   },
   loan: {
     type: Schema.Types.ObjectId,

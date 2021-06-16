@@ -1,19 +1,22 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const connectDb = require('./config/config');
+const routes = require("./routes");
 
-const PORT = process.env.PORT || 3000;
 
 const app = express();
+const PORT = 3001;
 
+//middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+//mongoDB connection
+connectDb();
+
+//routes
+app.use(routes);
 
 
 app.listen(PORT, () => {

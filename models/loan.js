@@ -7,7 +7,7 @@ const loanSchema = new Schema({
     type: Number,
   },
   interestRate: {
-    type: decimal128,
+    type: Number,
   },
   status: {
     type: String,
