@@ -1,0 +1,21 @@
+{
+  "name": "marshall-reddick",
+  "version": "1.0.0",
+  "description": "bare-bone express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cltn39/Marshall-Reddick"
+  },
+  "author": "Chris Song",
+  "license": "ISC",
+  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.5.15"
+  }
+}
