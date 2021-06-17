@@ -3,12 +3,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const transactionSchema = new Schema({
-  origination: {
-    type: Date,
-    default: Date.now
-  },
-  sales: {
-    type: Number,
+  type: {
+    type: String,
+    enum: ['Orignation', 'Sales']
   },
   loan: {
     type: Schema.Types.ObjectId,
