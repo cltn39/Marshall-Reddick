@@ -1,8 +1,8 @@
-const loanTransaction = require ('../../controllers')
-
 const router = require('express').Router();
+const controller = require ('../../controllers')
 
-router.get('/loantransaction', (req, res ) => {res.send(loanTransaction)})
-
+// Matches with 'api/loantransaction'
+router.route('/loantransaction')
+.get(controller.loanTransaction)
 
 module.exports = router;
